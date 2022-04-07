@@ -1,0 +1,37 @@
+{
+  "config": {
+    "name": "meego",
+    "base_uel": "https://meego.feishu-boe.cn/",
+    "variadles": {
+      "Type": "application/json",
+      "Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjY5NzY4MTg2OTUwNDE1OTc0NjAiLCJwcm9qZWN0SWQiOiI2MWNlYjE1ZThjMGI5ZjNkMDdiZDJiOGIiLCJ0ZW5hbnRLZXkiOiIxM2NjNGJhNDViNGYxNzRmIiwic2Fhc1RlbmFudEtleSI6IkRlZXBDb2xsYWJvcmF0aW9uIiwiaWF0IjoxNjQ4MTM0NTQ5fQ.7xObc7E5uTYPaMppT39D6MAoP2mgvZ39EIC2o3h0Wa4"
+    }
+  },
+  "teststeps": [
+    {
+      "name": "获取空间列表",
+      "request": {
+        "url": "/open_api/projects",
+        "method":"POST",
+
+        "json": {"user_key": "6976818695041597460"},
+        "headers": {
+          "Content-Type": "$Type","X-PLUGIN-TOKEN:": "$token"
+        }
+      },
+      "validate": [
+        {
+          "eq": [
+            ".实际结果",
+            "预计结果"
+          ]
+        },
+      ],
+      "extract": [
+        {
+          "提取的变量名": "提取的值"
+        }
+      ]
+    }
+  ]
+}

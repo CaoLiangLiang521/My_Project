@@ -1,0 +1,39 @@
+{
+  "config": {
+    "name": "meego",
+    "base_uel": "https://meego.feishu-boe.cn/",
+    "variadles": {
+      "key": 6976818695041597460
+    }
+  },
+  "teststeps": [
+    {
+      "name": "获取空间详情",
+      "request": {
+        "url": "/open_api/projects/detail",
+        "method": "POST",
+        "json": {
+          "user_key": "$key"
+        },
+        "headers": {}
+      },
+      "validate": [
+
+        {
+          "contains": [
+            "实际结果",
+            "预计结果"
+          ]
+        }
+      ],
+      "extract": [
+        {
+          "project_key": "data.project_key"
+        }
+      ]
+    },
+    {
+
+    }
+  ]
+}

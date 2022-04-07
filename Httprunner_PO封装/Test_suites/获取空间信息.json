@@ -1,0 +1,15 @@
+{
+  "config": {
+    "name": "Meego-批量运行_01"
+  },
+  "testcases": [
+    {
+      "name": "获取空间列表",
+      "tastcase": "测试用例/获取空间列表.json"
+    },
+    {
+      "name": "获取空间详情",
+      "tasecase": "测试用例/获取空间详情.json"
+    }
+  ]
+}
